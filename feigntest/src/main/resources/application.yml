@@ -4,3 +4,6 @@ spring:
 
 server:
   port: 9080
+
+accounts:
+  url: "http://localhost:8080/api"

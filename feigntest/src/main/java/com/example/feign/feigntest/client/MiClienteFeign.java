@@ -4,7 +4,7 @@ import com.example.feign.feigntest.dto.ResponseFeign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name="miCliente", url="http://localhost:8080/api")
+@FeignClient(name="miCliente", url="${accounts.url}")
 public interface MiClienteFeign {
 
     @GetMapping("/fetch?mobileNumber=4355437687")
