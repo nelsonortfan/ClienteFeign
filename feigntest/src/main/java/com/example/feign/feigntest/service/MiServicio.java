@@ -13,8 +13,8 @@ public class MiServicio {
         this.miClienteFeign = miClienteFeign;
     }
 
-    public ResponseFeign getResponse(){
-        return miClienteFeign.obtenerRespuesta();
+    public ResponseFeign getResponse(String mobileNumber){
+        return miClienteFeign.obtenerRespuesta(mobileNumber);
     }
 
 }

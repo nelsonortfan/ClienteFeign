@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,8 +20,8 @@ public class ClienteControllerTest {
     private MiServicio miServicio;
 
     @GetMapping("/test")
-    public ResponseEntity<ResponseFeign> obtenerDatos(){
-        ResponseFeign response = miServicio.getResponse();
+    public ResponseEntity<ResponseFeign> obtenerDatos(@RequestParam("mobileNumber") String mobileNumber){
+        ResponseFeign response = miServicio.getResponse(mobileNumber);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(response);
     }
 
