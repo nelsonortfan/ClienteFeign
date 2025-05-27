@@ -1,0 +1,6 @@
+spring:
+  application:
+  name: "feigntest"
+
+server:
+  port: 9080
